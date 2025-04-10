@@ -1,3 +1,10 @@
+# /// script
+# requires-python = ">=3.13"
+# dependencies = [
+#     "dnspython",
+#     "rich",
+# ]
+# ///
 """A simple tool to check response times of various DNS servers."""
 
 import time
@@ -150,6 +157,7 @@ if __name__ == "__main__":
         "205.171.3.65",  # Windstream DNS
         "192.168.1.190",  # Local DNS
     ]
+    domain = "apple.com"
 
-    results = benchmark_dns_servers(servers, "apple.com")
+    results = benchmark_dns_servers(servers, domain)
     display_results(results)
